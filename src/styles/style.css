@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F7F5F0;
+  position: relative;
+}
+
+html, h1, h2, h3, h4, h5, p, li, a, button, div {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-weight: 500;
+  color: #51516e;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: unset;
+  cursor: pointer;
+  display: block;
+}
+a:hover {
+  color: #E298AA;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .pc-display {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .sp-display {
+    display: none;
+  }
+}
+
+.l-wrap {
+  padding: 50px 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .l-wrap {
+    width: unset;
+    padding-top: 20px;
+  }
+}
+
+.l-container {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 11px 11px 0px #f2d6d7;
+}
+
+.l-inner {
+  padding: 50px 50px 30px;
+}
+@media (max-width: 767px) {
+  .l-inner {
+    padding: 40px 20px 20px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+.breadcrumbs > span {
+  margin: 0 7px;
+  font-size: 12px;
+  position: relative;
+  top: 2px;
+}
+@media (max-width: 767px) {
+  .breadcrumbs > span {
+    top: 1px;
+  }
+}
+.breadcrumbs > span:first-child {
+  margin-left: 0;
+}
+.breadcrumbs .post {
+  color: #333;
+}
+.breadcrumbs a {
+  color: #777;
+  font-size: 12px;
+}
+
+.heading {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #a1a1a1;
+}
+.heading h1 {
+  text-shadow: 0px 1px 5px #a1a1a1;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .heading h1 {
+    padding: 60px 0;
+  }
+}
+.heading h1 span {
+  display: block;
+  font-size: 30px;
+}
+
+/* styles.css */
+.toggleButon {
+  padding: 0;
+  z-index: 99;
+  width: 30px;
+  height: 40px;
+  border: unset;
+  background: unset;
+  position: absolute;
+  right: 40px;
+}
+@media (min-width: 768px) {
+  .toggleButon {
+    display: none;
+  }
+}
+.toggleButon span {
+  transition: 0.3s;
+}
+
+.line01, .line02, .line03 {
+  width: 100%;
+  height: 3px;
+  background-color: #51516e;
+  display: block;
+  border-radius: 100vmax;
+  opacity: 1;
+}
+
+.line01 {
+  transform: translate(0, -7px);
+}
+
+.line03 {
+  transform: translate(0, 7px);
+}
+
+.toggleButon[aria-expanded=true] > .line01 {
+  transform: translate(0, 2px) rotate(-45deg);
+  background: #fff;
+}
+
+.toggleButon[aria-expanded=true] > .line02 {
+  opacity: 0;
+}
+
+.toggleButon[aria-expanded=true] > .line03 {
+  transform: translate(0, -4px) rotate(45deg);
+  background: #fff;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 100%;
+    padding: 5rem 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #E298AA;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation[aria-hidden=false] {
+    margin-left: 50%;
+    transition: 0.5s;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

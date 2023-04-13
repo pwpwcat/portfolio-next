@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+$main: #F7F5F0;
+$text: #51516e;
+$link: #E298AA;
+
+//pc
+@mixin pc(){
+    @media (min-width: 767px) {
+        @content;
+    }
+}
+
+// sp
+@mixin sp(){
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// ipad
+@mixin ipad(){
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @content;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $main;
+    position: relative;
+}
+
+html,h1,h2,h3,h4,h5,p,li,a,button,div{
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: 'Noto Sans JP', 'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    font-weight: 500;
+    color: $text;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: unset;
+    // transition: .3s;
+    cursor: pointer;
+    display: block;
+
+    &:hover{
+        color: $link;
+    }
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
