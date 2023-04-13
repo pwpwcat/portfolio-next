@@ -133,7 +133,7 @@ export default function Home({ works, blogs }: Props) {
 return (
 <>
   <MyHead />
-  <Mv>ああああ
+  <Mv>
     <img src="images/mv.svg" alt="メインビジュアル" />
   </Mv>
   <Section>
