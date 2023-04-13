@@ -56,15 +56,16 @@ const Content = styled.div`
   }
 
   a{
-    color: rgb(226,152,170);
+    color: rgb(213 123 145);
     &::before{
       content: '🔗';
       display: inline-block;
       margin-right: 5px;
+      text-decoration: underline;
     }
 
     &:hover{
-      text-decoration: underline;
+      text-decoration: unset;
     }
   }
 `;
