@@ -57,11 +57,11 @@ const Content = styled.div`
 
   a{
     color: rgb(213 123 145);
+    text-decoration: underline;
     &::before{
       content: '🔗';
       display: inline-block;
       margin-right: 5px;
-      text-decoration: underline;
     }
 
     &:hover{
