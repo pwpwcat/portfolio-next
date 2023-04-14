@@ -253,7 +253,7 @@ return (
         <a href="https://www.instagram.com/20siesta/" target={'_blank'} rel="noopener">Instagram：@20siesta</a>
       </li>
       <li>
-        <a href="mailto:k.yoshiwa200@gmail.com">Mail：k.yoshiwa200@gmail.com</a>
+        <a href="mailto:info@pwpw-cat.site">Mail：info@pwpw-cat.site</a>
       </li>
     </ContactList>
   </Section>
