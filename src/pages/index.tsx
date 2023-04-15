@@ -137,7 +137,7 @@ return (
     <img src="images/mv.svg" alt="メインビジュアル" />
   </Mv>
   <Section>
-    <SecTitle>MIYA<span>Web Engineer / Designer</span></SecTitle>
+    <SecTitle>あああMIYA<span>Web Engineer / Designer</span></SecTitle>
     <Text>1996年3月8日生 茨城県出身</Text>
     <Text>MIYAという名前は旧姓と誕生日から取っています。</Text>
     <Text>WEB制作会社での経験を活かし、茨城を拠点としてWEBサイト制作を行っています。</Text>

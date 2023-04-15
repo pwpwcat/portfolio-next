@@ -1,5 +1,13 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, { 
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+  DocumentInitialProps,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import {googleTagManagerId} from '@/libs/gtm';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -26,5 +34,28 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render(): JSX.Element {
+    return (
+      <Html prefix="og: https://ogp.me/ns#">
+        <Head />
+        <body>
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `
+              <iframe
+                src="https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+              />`,
+            }}
+          />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
