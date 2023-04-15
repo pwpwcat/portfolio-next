@@ -39,7 +39,12 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html prefix="og: https://ogp.me/ns#">
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <noscript
             dangerouslySetInnerHTML={{
