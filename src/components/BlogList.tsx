@@ -73,6 +73,14 @@ const List = styled.li`
 
 `;
 
+const Content = styled.div`
+  p{
+    font-size: 13px;
+    color: #9b9bb5;
+    line-height: 1.5;
+  }
+`;
+
 
 
 // const WorkList: React.FC<Props> = ({ children }) =>
@@ -86,7 +94,7 @@ const BlogList: React.FC<Props> = ({isText, icon, title, date, id, body}) =>  {
                 <div className="title">
                     <span className="date"><time>{dayjs.utc(date).tz('Asia/Tokyo').format('YYYY.MM.DD')}</time></span>
                     {title}
-                    {isText && <p className="body">{body}</p>}
+                    {isText && <Content dangerouslySetInnerHTML={{ __html: body.slice( 0, 60 ) + '...' }}></Content>}
                 </div>
                 
                 </Link>
