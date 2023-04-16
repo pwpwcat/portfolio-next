@@ -94,7 +94,7 @@ const BlogList: React.FC<Props> = ({isText, icon, title, date, id, body}) =>  {
                 <div className="title">
                     <span className="date"><time>{dayjs.utc(date).tz('Asia/Tokyo').format('YYYY.MM.DD')}</time></span>
                     {title}
-                    {isText && <Content dangerouslySetInnerHTML={{ __html: body.slice( 0, 60 ) + '...' }}></Content>}
+                    {isText && <Content dangerouslySetInnerHTML={{ __html: body.slice( 0, 60 ) + '...' }} />}
                 </div>
                 
                 </Link>
