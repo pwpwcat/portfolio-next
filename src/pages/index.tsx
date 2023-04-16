@@ -188,6 +188,7 @@ return (
           <a href="https://youtu.be/hzWqb4mS0Mg" target="_blank" rel="noopener">JAM Project</a>
           <a href="https://youtu.be/X4QGvxLAw2Y" target="_blank" rel="noopener">福山芳樹</a>
           <a href="https://youtu.be/l6SeJDA0JA4" target="_blank" rel="noopener">Fire Bomber</a>
+          <a href="https://www.youtube.com/watch?v=Pca7RONLQdE" target="_blank" rel="noopener">きくお</a>
           <a href="https://youtu.be/fjrvWaXJj_A" target="_blank" rel="noopener">ALI PROJECT</a>
           <a href="https://music.youtube.com/watch?v=SEb3uEQ4gok&amp;feature=share" target="_blank"
             rel="noopener">平沢進</a>
@@ -204,7 +205,6 @@ return (
           <a href="https://youtu.be/j6AB_tgZHGk" target="_blank" rel="noopener">キセル</a>
           <a href="https://www.nicovideo.jp/watch/sm7295500" target="_blank" rel="noopener">cosMo@暴走P</a>
           <a href="https://youtu.be/3DghhiR5oHk" target="_blank" rel="noopener">ATOLS</a>
-          <a href="https://youtu.be/NTrm_idbhUk" target="_blank" rel="noopener">きくお</a>
         </div>
       </li>
     </Detail>
