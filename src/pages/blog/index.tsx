@@ -51,7 +51,7 @@ export const getStaticProps = async () => {
             <Ul>
             {blogs.map((blog) => (
                 <BlogList
-                isText={false}
+                isText={true}
                 body={blog.body}
                 key={blog.id}
                 id={blog.id}
