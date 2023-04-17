@@ -51,7 +51,7 @@ const Heading = styled.div`
 
 const Content = styled.div`
   p{
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 10px;
   }
 
