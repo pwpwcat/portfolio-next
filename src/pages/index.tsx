@@ -87,6 +87,7 @@ margin-top: 15px;
     
     a{
       font-weight: 700;
+      display: inline-block;
     }
   }
 `;
