@@ -61,7 +61,7 @@ export const getStaticProps = async () => {
                 id={work.id}
                 src={work.thumb.url}
                 title={work.title}
-                date={work.updatedAt}
+                date={work.date}
                 />
             ))}
             </Ul>
