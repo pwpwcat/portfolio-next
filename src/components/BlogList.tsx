@@ -25,8 +25,6 @@ const List = styled.li`
     line-height: 2;
     
     a{
-        display: flex;
-        align-items: center;
         transition: .3s;
 
         &:hover{
@@ -34,6 +32,11 @@ const List = styled.li`
                 color: #E298AA;
             }
         }
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
     }
 
     .icon{
@@ -55,8 +58,9 @@ const List = styled.li`
     .title{
         margin-left: 15px;
         font-weight: 700;
+        line-height: 1.5;
         ${sp`
-            margin-left: 5px;
+            margin-left: 10px;
         `}
 
         span{
@@ -78,6 +82,10 @@ const Content = styled.div`
     font-size: 13px;
     color: #9b9bb5;
     line-height: 1.5;
+    
+    ${sp`
+        margin-top: 10px;
+    `}
   }
 `;
 
@@ -90,13 +98,14 @@ const BlogList: React.FC<Props> = ({isText, icon, title, date, id, body}) =>  {
         <>
             <List>
                 <Link href={`/blog/${id}`}>
-                <div className="icon">{icon}</div>
-                <div className="title">
-                    <span className="date"><time>{dayjs.utc(date).tz('Asia/Tokyo').format('YYYY.MM.DD')}</time></span>
-                    {title}
-                    {isText && <Content dangerouslySetInnerHTML={{ __html: body.slice( 0, 60 ) + '...' }} />}
+                <div className="flex">
+                    <div className="icon">{icon}</div>
+                    <div className="title">
+                        <span className="date"><time>{dayjs.utc(date).tz('Asia/Tokyo').format('YYYY.MM.DD')}</time></span>
+                        {title}
+                    </div>
                 </div>
-                
+                {isText && <Content dangerouslySetInnerHTML={{ __html: body.slice( 0, 60 ) + '...' }} />}
                 </Link>
             </List>
         </>

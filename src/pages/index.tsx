@@ -231,7 +231,7 @@ return (
     <BlogUl>
       {blogs.map((blog) => (
         <BlogList
-        isText={true}
+        isText={false}
         body={blog.body}
         key={blog.id}
         icon={blog.icon}
