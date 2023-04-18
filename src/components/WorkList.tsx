@@ -57,7 +57,7 @@ const WorkList: React.FC<Props> = ({src, title, date, id}) =>  {
                 <div className="thumb">
                 <img src={src} alt={title} />
                 </div>
-                <p>{title}<time>{dayjs.utc(date).tz('Asia/Tokyo').format('YYYY.MM')}</time></p>
+                <p>{title}<Moment format="YYYY.MM">{date}</Moment></p>
                 </Link>
             </List>
         </>
