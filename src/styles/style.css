@@ -9,19 +9,33 @@ html {
 }
 
 body {
-  background: #F7F5F0;
+  background: #f7f5f0;
   position: relative;
 }
 
-html, h1, h2, h3, h4, h5, p, li, a, button, div {
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+a,
+button,
+div {
   letter-spacing: 1px;
   font-size: 14px;
   font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #51516e;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 700;
 }
 
@@ -31,7 +45,7 @@ a {
   display: block;
 }
 a:hover {
-  color: #E298AA;
+  color: #e298aa;
 }
 
 img {
@@ -148,7 +162,9 @@ img {
   transition: 0.3s;
 }
 
-.line01, .line02, .line03 {
+.line01,
+.line02,
+.line03 {
   width: 100%;
   height: 3px;
   background-color: #51516e;
@@ -191,8 +207,9 @@ img {
     right: 0;
     left: 0;
     height: 100vh;
-    background-color: #E298AA;
+    background-color: #e298aa;
     transition: 0.5s;
+    z-index: 999;
   }
 }
 
@@ -200,6 +217,22 @@ img {
   .navigation[aria-hidden=false] {
     margin-left: 50%;
     transition: 0.5s;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
