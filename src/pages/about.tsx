@@ -57,7 +57,7 @@ const CareerUl = styled.div`
         width: 3px;
         height: 100%;
         display: block;
-        background-color: #e0e0e0;
+        background-color: #f1d6d6;
         position: absolute;
         left: 0;
         top: 0;
