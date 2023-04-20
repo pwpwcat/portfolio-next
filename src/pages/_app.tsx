@@ -7,6 +7,7 @@ import GoogleTagManager, {
   GoogleTagManagerId,
 } from '@/components/GoogleTagManager';
 
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>

@@ -65,7 +65,7 @@ export const Nav: FC<Props> = ({ open, id, onClick }) =>{
         <NavList id={id} aria-hidden={!open} className="navigation">
             <ul>
                 <li><Link onClick={onClick} href="/">Top</Link></li>
-                {/* <li><Link href="/about">About</Link></li> */}
+                <li><Link onClick={onClick} href="/about">About</Link></li>
                 <li><Link onClick={onClick} href="/work">Work</Link></li>
                 <li><Link onClick={onClick} href="/blog">Blog</Link></li>
                 <li><Link onClick={onClick} href="/#contact">Contact</Link></li>
