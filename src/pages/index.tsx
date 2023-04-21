@@ -144,7 +144,7 @@ export default function Home({ works, blogs }: Props) {
 
   return (
     <>
-      {/* <Loading isShow={isShowLoading} /> */}
+      <Loading isShow={isShowLoading} />
       <MyHead />
       <Mv>
         <img src="images/mv.svg" alt="メインビジュアル" />
