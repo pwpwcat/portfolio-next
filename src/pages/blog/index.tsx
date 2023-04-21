@@ -7,6 +7,7 @@ import type { Blog } from "@/types/blog";
 import SecTitle from "@/components/SecTitle";
 import MyHead from "@/components/include/MyHead";
 import { pc, sp, tab } from "@/components/Media";
+import { motion } from "framer-motion";
 
 const Ul = styled.ul`
   padding-top: 5px;
@@ -40,24 +41,30 @@ type Props = {
 export default function BlogHome({ blogs }: Props) {
   console.log(blogs);
   return (
-    <>
-      <MyHead title={"Blog | pwpw-cat portfolio site"} />
-      <Section>
-        <SecTitle>Blog</SecTitle>
-        <Ul>
-          {blogs.map((blog) => (
-            <BlogList
-              isText={true}
-              body={blog.body}
-              key={blog.id}
-              id={blog.id}
-              icon={blog.icon}
-              title={blog.title}
-              date={blog.updatedAt}
-            />
-          ))}
-        </Ul>
-      </Section>
-    </>
+    <motion.div
+      initial={{ opacity: 0 }} // 初期状態
+      animate={{ opacity: 1 }} // マウント時
+      exit={{ opacity: 0 }} // アンマウント時
+    >
+      <>
+        <MyHead title={"Blog | pwpw-cat portfolio site"} />
+        <Section>
+          <SecTitle>Blog</SecTitle>
+          <Ul>
+            {blogs.map((blog) => (
+              <BlogList
+                isText={true}
+                body={blog.body}
+                key={blog.id}
+                id={blog.id}
+                icon={blog.icon}
+                title={blog.title}
+                date={blog.updatedAt}
+              />
+            ))}
+          </Ul>
+        </Section>
+      </>
+    </motion.div>
   );
 }

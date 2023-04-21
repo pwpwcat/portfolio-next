@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
 
 const Load = keyframes`
   0% {
@@ -20,73 +20,60 @@ const Attack = keyframes`
 
 const Wrapper = styled.div`
   position: fixed;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  background: rgba(255, 255, 255, .2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e298aa;
   pointer-events: auto;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+  display: flex;
+  align-items: center;
 
-  &[data-is-show='false'] {
+  &[data-is-show="false"] {
     opacity: 0;
     pointer-events: none;
   }
 
-  .circle {
-    position: absolute;
-    top: 50%; left: 50%;
-    margin: -50px;
-    border-radius: 50%;
-    width: 100px; height: 100px;
-    animation: ${ Load } 1.2s ease infinite normal;
-
-    .dot {
-      position: absolute;
-      margin: -5px;
-      top: 50%; left: 50%;
-      border-radius: 50%;
-      width: 10px; height: 10px;
-      background: rgba(0, 0, 0, .4);
-      animation: ${ Attack } .6s ease infinite alternate;
-
-      &:nth-child(1) {
-        margin-top: calc(-30px - 5px);
-      }
-
-      &:nth-child(2) {
-        margin-top: calc(-9.27px - 5px);
-        margin-left: calc(28.53px - 5px);
-      }
-
-      &:nth-child(3) {
-        margin-top: calc(-9.27px - 5px);
-        margin-left: calc(-28.53px - 5px);
-      }
-
-      &:nth-child(4) {
-        margin-top: calc(24.27px - 5px);
-        margin-left: calc(17.63px - 5px);
-      }
-
-      &:nth-child(5) {
-        margin-top: calc(24.27px - 5px);
-        margin-left: calc(-17.63px - 5px);
-      }
-    }
+  svg {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
   }
 `;
 
-export default function Loading({ isShow }: {
-  isShow: boolean;
-}) {
+export default function Loading({ isShow }: { isShow: boolean }) {
   return (
-    <Wrapper data-is-show={ String(isShow) }>
-      <ul className="circle">
-        <li className="dot" />
-        <li className="dot" />
-        <li className="dot" />
-        <li className="dot" />
-        <li className="dot" />
-      </ul>
+    <Wrapper data-is-show={String(isShow)}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="135"
+        height="135"
+        viewBox="0 0 135 135"
+        fill="#fff"
+      >
+        <path d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 67 67"
+            to="-360 67 67"
+            dur="2.5s"
+            repeatCount="indefinite"
+          />
+        </path>
+        <path d="M28.19 40.31c6.627 0 12-5.374 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.626 5.372 12 12 12zm30.72-19.825c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97-4.686-4.687-12.284-4.687-16.97 0-4.687 4.686-4.687 12.284 0 16.97zm35.74 7.705c0 6.627 5.37 12 12 12 6.626 0 12-5.373 12-12 0-6.628-5.374-12-12-12-6.63 0-12 5.372-12 12zm19.822 30.72c-4.686 4.686-4.686 12.284 0 16.97 4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0zm-7.704 35.74c-6.627 0-12 5.37-12 12 0 6.626 5.373 12 12 12s12-5.374 12-12c0-6.63-5.373-12-12-12zm-30.72 19.822c-4.686-4.686-12.284-4.686-16.97 0-4.686 4.687-4.686 12.285 0 16.97 4.686 4.687 12.284 4.687 16.97 0 4.687-4.685 4.687-12.283 0-16.97zm-35.74-7.704c0-6.627-5.372-12-12-12-6.626 0-12 5.373-12 12s5.374 12 12 12c6.628 0 12-5.373 12-12zm-19.823-30.72c4.687-4.686 4.687-12.284 0-16.97-4.686-4.686-12.284-4.686-16.97 0-4.687 4.686-4.687 12.284 0 16.97 4.686 4.687 12.284 4.687 16.97 0z">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 67 67"
+            to="360 67 67"
+            dur="8s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
     </Wrapper>
   );
 }

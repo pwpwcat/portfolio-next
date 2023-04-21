@@ -1,12 +1,13 @@
-import WorkList from '@/components/WorkList'
+import WorkList from "@/components/WorkList";
 import styled from "styled-components";
 import Link from "next/link";
 import type { InferGetStaticPropsType, NextPage } from "next";
 import { client } from "@/libs/client";
 import type { WorkType } from "@/types/blog";
-import SecTitle from '@/components/SecTitle'
-import MyHead from '@/components/include/MyHead';
-import { pc, sp, tab } from '@/components/Media';
+import SecTitle from "@/components/SecTitle";
+import MyHead from "@/components/include/MyHead";
+import { pc, sp, tab } from "@/components/Media";
+import { motion } from "framer-motion";
 
 const Ul = styled.ul`
   padding-top: 5px;
@@ -20,52 +21,56 @@ const Section = styled.section`
   ${sp`
       margin-top: 40px;
   `}
-  li{
+  li {
     margin-bottom: 40px;
   }
 `;
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
-    const work = await client.get({ 
-        endpoint: "work",
-        queries: { 
-            limit: 3000 ,
-            // orders: 'publishedAt' 並び替え
-        }
-       });
-    return {
-      props: {
-        works: work.contents,
-      },
-    };
+  const work = await client.get({
+    endpoint: "work",
+    queries: {
+      limit: 3000,
+      // orders: 'publishedAt' 並び替え
+    },
+  });
+  return {
+    props: {
+      works: work.contents,
+    },
   };
-  
-  type Props = {
-    works: Array<WorkType>;
-  };
-  
-  export default function Work({ works }: Props){
-    // console.log('結果'+works[2])
-    return(
+};
+
+type Props = {
+  works: Array<WorkType>;
+};
+
+export default function Work({ works }: Props) {
+  // console.log('結果'+works[2])
+  return (
+    <motion.div
+      initial={{ opacity: 0 }} // 初期状態
+      animate={{ opacity: 1 }} // マウント時
+      exit={{ opacity: 0 }} // アンマウント時
+    >
       <>
-      <MyHead 
-      title={'Work | pwpw-cat portfolio site'}
-      />
+        <MyHead title={"Work | pwpw-cat portfolio site"} />
         <Section>
           <SecTitle>Work</SecTitle>
-            <Ul>
+          <Ul>
             {works.map((work) => (
-                <WorkList
+              <WorkList
                 key={work.id}
                 id={work.id}
                 src={work.thumb.url}
                 title={work.title}
                 date={work.date}
-                />
+              />
             ))}
-            </Ul>
+          </Ul>
         </Section>
       </>
-    )
-  }
+    </motion.div>
+  );
+}
