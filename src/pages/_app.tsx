@@ -10,6 +10,7 @@ import GoogleTagManager, {
 } from "@/components/GoogleTagManager";
 import Loading from "@/components/Loading";
 
+// オープニングアニメーション（ローディング）
 function OpeningAnimation() {
   const [loading, setLoading] = useState(true);
 
@@ -47,6 +48,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <div className="l-wrap">
         <div className="l-container">
           <div className="l-inner">
+            {/* フワッと遷移の制御 */}
             <AnimatePresence
               mode="wait"
               onExitComplete={() => window.scrollTo(0, 0)}

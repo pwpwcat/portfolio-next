@@ -211,7 +211,7 @@ export default function Home({ works, blogs }: Props) {
                 キャラクターデザイン / イラスト制作 / DTPデザイン
               </p>
             </li>
-            <li>
+            {/* <li>
               <h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -234,8 +234,8 @@ export default function Home({ works, blogs }: Props) {
                 トップをねらえ！シリーズ / マブラヴ オルタネイティヴ /
                 TRIGGER作品 / Fateシリーズ 等
               </p>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -388,7 +388,7 @@ export default function Home({ works, blogs }: Props) {
                   ATOLS
                 </a>
               </div>
-            </li>
+            </li> */}
           </Detail>
           <More url={"./about"} />
         </Section>
