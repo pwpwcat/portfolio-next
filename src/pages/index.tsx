@@ -112,7 +112,10 @@ const BlogUl = styled.ul`
   padding-top: 5px;
 
   li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    ${sp`
+      margin-bottom: 20px;
+  `}
   }
 `;
 
