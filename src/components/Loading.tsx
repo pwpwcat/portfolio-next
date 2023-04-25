@@ -1,40 +1,15 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 
-const Load = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-const Attack = keyframes`
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.4, 1.4);
-  }
-`;
-
-const Wrapper = styled.div`
+const Wrap = styled.div`
+  background: #e298aa;
+  z-index: 999;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #e298aa;
-  pointer-events: auto;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-
-  &[data-is-show="false"] {
-    opacity: 0;
-    pointer-events: none;
-  }
 
   svg {
     width: 100px;
@@ -43,9 +18,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function Loading({ isShow }: { isShow: boolean }) {
+export default function Loading() {
   return (
-    <Wrapper data-is-show={String(isShow)}>
+    <Wrap>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="135"
@@ -74,6 +49,6 @@ export default function Loading({ isShow }: { isShow: boolean }) {
           />
         </path>
       </svg>
-    </Wrapper>
+    </Wrap>
   );
 }

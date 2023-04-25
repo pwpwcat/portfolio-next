@@ -143,7 +143,6 @@ export default function Home({ works, blogs }: Props) {
       exit={{ opacity: 0 }} // アンマウント時
     >
       <>
-        {/* <Loading isShow={isShowLoading} /> */}
         <MyHead />
         <Mv>
           <img src="images/mv.svg" alt="メインビジュアル" />

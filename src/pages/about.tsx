@@ -70,12 +70,15 @@ const CareerUl = styled.div`
 export default function About() {
   return (
     <motion.div
-      initial={{ opacity: 0 }} // 初期状態
-      animate={{ opacity: 1 }} // マウント時
-      exit={{ opacity: 0 }} // アンマウント時
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <>
-        <MyHead title={"About | pwpw-cat portfolio site"} />
+        <MyHead
+          title={"About | pwpw-cat portfolio site"}
+          description={"MIYAについて"}
+        />
         <Section>
           <SecTitle>
             MIYA<span>Web Engineer / Designer</span>

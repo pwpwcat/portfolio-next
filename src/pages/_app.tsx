@@ -25,12 +25,8 @@ function OpeningAnimation() {
     <AnimatePresence>
       {loading && (
         <>
-          <motion.div
-            key="opening"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <Loading isShow={loading} />
+          <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <Loading />
           </motion.div>
         </>
       )}

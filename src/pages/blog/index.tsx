@@ -42,12 +42,15 @@ export default function BlogHome({ blogs }: Props) {
   console.log(blogs);
   return (
     <motion.div
-      initial={{ opacity: 0 }} // 初期状態
-      animate={{ opacity: 1 }} // マウント時
-      exit={{ opacity: 0 }} // アンマウント時
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <>
-        <MyHead title={"Blog | pwpw-cat portfolio site"} />
+        <MyHead
+          title={"Blog | pwpw-cat portfolio site"}
+          description={"備忘録など"}
+        />
         <Section>
           <SecTitle>Blog</SecTitle>
           <Ul>
