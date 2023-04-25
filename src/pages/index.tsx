@@ -110,6 +110,10 @@ const WorkUl = styled.ul`
 
 const BlogUl = styled.ul`
   padding-top: 5px;
+
+  li {
+    margin-bottom: 20px;
+  }
 `;
 
 export const getStaticProps = async () => {
