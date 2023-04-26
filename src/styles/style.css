@@ -41,6 +41,7 @@ h5 {
 
 a {
   text-decoration: unset;
+  transition: 0.3s;
   cursor: pointer;
   display: block;
 }
@@ -152,6 +153,7 @@ img {
   background: unset;
   position: absolute;
   right: 40px;
+  z-index: 9999;
 }
 @media (min-width: 768px) {
   .toggleButon {
@@ -209,7 +211,7 @@ img {
     height: 100vh;
     background-color: #e298aa;
     transition: 0.5s;
-    z-index: 999;
+    z-index: 998;
   }
 }
 

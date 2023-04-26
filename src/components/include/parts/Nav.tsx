@@ -34,6 +34,7 @@ const NavList = styled.nav`
   a {
     font-weight: bold;
     font-size: 15px;
+    transition: 0.3s;
 
     ${sp`
             font-size: 20px;

@@ -115,7 +115,7 @@ const BlogUl = styled.ul`
     margin-bottom: 10px;
     ${sp`
       margin-bottom: 20px;
-  `}
+    `}
   }
 `;
 
@@ -145,9 +145,9 @@ type Props = {
 export default function Home({ works, blogs }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0 }} // 初期状態
-      animate={{ opacity: 1 }} // マウント時
-      exit={{ opacity: 0 }} // アンマウント時
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       <>
         <MyHead />

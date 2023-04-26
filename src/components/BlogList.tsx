@@ -29,6 +29,7 @@ const List = styled.li`
     &:hover {
       div {
         color: #e298aa;
+        transition: 0.3s;
       }
     }
   }
@@ -58,6 +59,8 @@ const List = styled.li`
     margin-left: 15px;
     font-weight: 700;
     line-height: 1.5;
+    transition: 0.3s;
+
     ${sp`
             margin-left: 10px;
         `}
