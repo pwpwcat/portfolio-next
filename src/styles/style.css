@@ -153,7 +153,7 @@ img {
   background: unset;
   position: absolute;
   right: 40px;
-  z-index: 9999;
+  z-index: 999;
 }
 @media (min-width: 768px) {
   .toggleButon {

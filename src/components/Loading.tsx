@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrap = styled.div`
   background: #e298aa;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   position: fixed;
