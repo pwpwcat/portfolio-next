@@ -32,11 +32,15 @@ const CareerUl = styled.div`
     width: 30%;
     font-weight: 700;
     ${sp`
-      width: 35%;
+      width: 40%;
+      position: relative;
+      top: 2px;
     `}
     span {
       display: block;
-      font-size: 12px;
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 500;
     }
   }
 
@@ -55,7 +59,7 @@ const CareerUl = styled.div`
 
       &::after {
         content: "";
-        width: 3px;
+        width: 2px;
         height: 100%;
         display: block;
         background-color: #f1d6d6;
@@ -103,7 +107,7 @@ export default function About() {
                 2014年<span>3月</span>
               </div>
               <div className="comment">
-                <h3>八洲学園大学国際高等学校　卒業</h3>
+                <h3>八洲学園大学国際高等学校を卒業</h3>
                 {/* <Text>
                 2012年に地元の女子高から通信制の八洲学園大学高等学校へ編入しました。当時は小学生の頃からとにかく好きだったチャットをしたりデジタルイラストを描いたりしていて、家が山奥にあるという事もありほとんど家に引きこもっていました。
               </Text>
@@ -211,9 +215,7 @@ export default function About() {
             <li>
               <div className="year">
                 2021年
-                <span>
-                  6月〜<br className="sp-display"></br>在職
-                </span>
+                <span>6月〜在職</span>
               </div>
               <div className="comment">
                 <h3>

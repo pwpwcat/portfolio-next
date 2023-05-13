@@ -62,7 +62,7 @@ export default function BlogHome({ blogs }: Props) {
                 id={blog.id}
                 icon={blog.icon}
                 title={blog.title}
-                date={blog.updatedAt}
+                date={blog.createdAt}
               />
             ))}
           </Ul>

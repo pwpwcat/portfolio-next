@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import More from "@/components/MoreButton";
@@ -55,6 +56,14 @@ const List = styled.li`
         `}
   }
 
+  .new-icon {
+    color: #e298aa;
+    margin-left: 5px;
+    font-size: 12px;
+    position: relative;
+    top: -1px;
+  }
+
   .title {
     margin-left: 15px;
     font-weight: 700;
@@ -90,8 +99,17 @@ const Content = styled.div`
   }
 `;
 
-// const WorkList: React.FC<Props> = ({ children }) =>
+function NewIcon({ date }: { date: string }) {
+  const keepday = 20;
+  const upday = dayjs.utc(date).tz("Asia/Tokyo").format("YYYY.MM.DD");
+  const today = dayjs();
+  const newcalc = today.diff(upday, "day");
+
+  return newcalc <= keepday ? <span className="new-icon">NEW</span> : null;
+}
+
 const BlogList: React.FC<Props> = ({ isText, icon, title, date, id, body }) => {
+  const upday = dayjs.utc(date).tz("Asia/Tokyo").format("YYYY.MM.DD");
   return (
     <>
       <List>
@@ -105,6 +123,7 @@ const BlogList: React.FC<Props> = ({ isText, icon, title, date, id, body }) => {
                 </time>
               </span>
               {title}
+              <NewIcon date={date} />
             </div>
           </div>
           {isText && (
