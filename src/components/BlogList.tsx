@@ -100,7 +100,7 @@ const Content = styled.div`
 `;
 
 function NewIcon({ date }: { date: string }) {
-  const keepday = 20;
+  const keepday = 7;
   const upday = dayjs.utc(date).tz("Asia/Tokyo").format("YYYY.MM.DD");
   const today = dayjs();
   const newcalc = today.diff(upday, "day");
@@ -118,9 +118,7 @@ const BlogList: React.FC<Props> = ({ isText, icon, title, date, id, body }) => {
             <div className="icon">{icon}</div>
             <div className="title">
               <span className="date">
-                <time>
-                  {dayjs.utc(date).tz("Asia/Tokyo").format("YYYY.MM.DD")}
-                </time>
+                <time>{upday}</time>
               </span>
               {title}
               <NewIcon date={date} />

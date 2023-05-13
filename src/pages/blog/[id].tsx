@@ -46,6 +46,26 @@ const Heading = styled.div`
     font-size: 14px;
     display: block;
     margin-top: 5px;
+    font-weight: 700;
+  }
+
+  .date {
+    display: flex;
+
+    .update {
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+      color: #8e8e9d;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: 3px;
+      margin-right: 3px;
+    }
   }
 `;
 
@@ -85,6 +105,9 @@ type Props = {
 };
 
 export default function BlogId({ blog, highlightedBody }: Props) {
+  if (blog.updatedAt === undefined) {
+    blog.updatedAt = "";
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -100,7 +123,26 @@ export default function BlogId({ blog, highlightedBody }: Props) {
             <div className="icon">{blog.icon}</div>
             <h1>
               {blog.title}
-              <Moment format="YYYY.MM.DD">{blog.createdAt}</Moment>
+              <div className="date">
+                <Moment format="YYYY.MM.DD">{blog.createdAt}</Moment>
+                <p className="update">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                    />
+                  </svg>
+                  <Moment format="YYYY.MM.DD">{blog.updatedAt}</Moment>
+                </p>
+              </div>
             </h1>
           </Heading>
           <Content
