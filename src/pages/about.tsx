@@ -350,7 +350,7 @@ export default function About() {
                 Like - Anime & Comic
               </h3>
               <p className="DetailText">
-                ゲッターロボシリーズ / マジンガーシリーズ / マクロス7 /
+                ダイナミックプロ（特にゲッター）/ マクロス7 /
                 トップをねらえ！シリーズ / マブラヴ オルタネイティヴ /
                 TRIGGER作品 / Fateシリーズ 等
               </p>
