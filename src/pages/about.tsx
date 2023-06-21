@@ -310,7 +310,7 @@ export default function About() {
                   （秋葉原｜アルバイト→正社員）
                 </h3>
                 <Text>
-                  広報部WEB担当 フロントエンドエンジニアとして入社しました。
+                  広報部WEB担当（と言うべきか？）フロントエンドエンジニアとして入社しました。
                 </Text>
                 <Text>フルリモートワークです。</Text>
                 <div className="work">
