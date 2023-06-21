@@ -71,6 +71,76 @@ const CareerUl = styled.div`
   }
 `;
 
+export const LikeDetail = styled.ul`
+  padding-top: 25px;
+  padding-bottom: 40px;
+  li {
+    /* border-top: 1px solid #e0e0e0; */
+    padding-bottom: 40px;
+
+    ${sp`
+    padding-bottom:35px;
+`}
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+
+    span {
+      font-size: 12px;
+      margin-left: 10px;
+      font-weight: 500;
+    }
+
+    svg {
+      width: 18px;
+      position: relative;
+      top: 3px;
+      margin-right: 8px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1.8;
+    margin-right: 10px;
+  }
+
+  .DetailText,
+  a {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+`;
+
+export const LikeBtn = styled.a`
+  border: 1px solid #e298aa;
+  background: #e298aa;
+  border-radius: 100vmax;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  padding: 6px 14px 9px;
+  margin-top: 20px;
+
+  svg {
+    width: 18px;
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: unset;
+    color: #e298aa;
+  }
+`;
+
 export default function About() {
   return (
     <motion.div
@@ -98,6 +168,23 @@ export default function About() {
           <Text>
             現在は茨城を拠点に、主にフロントエンドエンジニアとして活動しています。
           </Text>
+          <LikeBtn href="#like">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+            好きなもの
+          </LikeBtn>
         </Section>
         <Section>
           <SecTitle>Career</SecTitle>
@@ -240,6 +327,189 @@ export default function About() {
           <Text>
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
+        </Section>
+        <Section>
+          <SecTitle>Like*</SecTitle>
+          <LikeDetail id="like">
+            <li>
+              <h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+                Like - Anime & Comic
+              </h3>
+              <p className="DetailText">
+                ゲッターロボシリーズ / マジンガーシリーズ / マクロス7 /
+                トップをねらえ！シリーズ / マブラヴ オルタネイティヴ /
+                TRIGGER作品 / Fateシリーズ 等
+              </p>
+            </li>
+            <li>
+              <h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"
+                  />
+                </svg>
+                Like - Artist<span>敬称略</span>
+              </h3>
+              <div>
+                <a
+                  href="https://youtu.be/sOjvROaN6wI"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  KEYTALK
+                </a>
+                <a
+                  href="https://youtu.be/09wA4qWXOdU"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  BRADIO
+                </a>
+                <a
+                  href="https://youtu.be/hzWqb4mS0Mg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  JAM Project
+                </a>
+                <a
+                  href="https://youtu.be/X4QGvxLAw2Y"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  福山芳樹
+                </a>
+                <a
+                  href="https://youtu.be/l6SeJDA0JA4"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Fire Bomber
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=Pca7RONLQdE"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  きくお
+                </a>
+                <a
+                  href="https://youtu.be/fjrvWaXJj_A"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  ALI PROJECT
+                </a>
+                <a
+                  href="https://music.youtube.com/watch?v=SEb3uEQ4gok&amp;feature=share"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  平沢進
+                </a>
+                <a
+                  href="https://music.youtube.com/watch?v=LRHVrMy2Vj4&amp;feature=share"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  P-MODEL
+                </a>
+                <a
+                  href="https://music.youtube.com/watch?v=OJU6BImQ7sQ&amp;feature=share"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  倉橋ヨエコ
+                </a>
+                <a
+                  href="https://youtu.be/XL5inQwnFSg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  女王蜂
+                </a>
+                <a
+                  href="https://youtu.be/Q6x1LFYZAVU"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  amazarashi
+                </a>
+                <a
+                  href="https://youtu.be/JKhMgQAY26c"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  神聖かまってちゃん
+                </a>
+                <a
+                  href="https://youtu.be/-4O6X3Z_QUA"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  アーバンギャルド
+                </a>
+                <a
+                  href="https://youtu.be/c7VCxdEmHU0"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Kalafina
+                </a>
+                <a
+                  href="https://youtu.be/XVOdJFbQuts"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Sound Horizon
+                </a>
+                <a
+                  href="https://youtu.be/j6AB_tgZHGk"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  キセル
+                </a>
+                <a
+                  href="https://www.nicovideo.jp/watch/sm7295500"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  cosMo@暴走P
+                </a>
+                <a
+                  href="https://youtu.be/3DghhiR5oHk"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  ATOLS
+                </a>
+              </div>
+            </li>
+          </LikeDetail>
         </Section>
       </>
     </motion.div>
