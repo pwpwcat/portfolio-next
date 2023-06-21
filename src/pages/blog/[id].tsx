@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
@@ -6,108 +8,70 @@ import Moment from "react-moment";
 import { client } from "@/libs/client";
 import type { Blog } from "@/types/blog";
 import MyHead from "@/components/include/MyHead";
-import { pc, sp, tab } from "@/components/Media";
 import { motion } from "framer-motion";
-
-const Main = styled.main`
-  margin-top: 60px;
-  margin-bottom: 40px;
-  ${sp`
-      margin-top: 40px;
-  `}
-
-  code {
-    border-radius: 10px;
-    margin: 15px 0;
-  }
-`;
-
-const Heading = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 3px dotted #e0e0e0;
-
-  .icon {
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 30px;
-  }
-
-  h1 {
-    font-size: 20px;
-    ${sp`
-      font-size: 18px;
-    `}
-  }
-
-  time {
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
-    font-weight: 700;
-  }
-
-  .date {
-    display: flex;
-
-    .update {
-      margin-left: 15px;
-      display: flex;
-      align-items: center;
-      color: #8e8e9d;
-    }
-
-    svg {
-      width: 15px;
-      height: 15px;
-      position: relative;
-      top: 3px;
-      margin-right: 3px;
-    }
-  }
-`;
-
-const Content = styled.div`
-  p {
-    line-height: 1.9;
-    margin-bottom: 10px;
-  }
-
-  a {
-    color: rgb(213 123 145);
-    text-decoration: underline;
-    &::before {
-      content: "🔗";
-      display: inline-block;
-      margin-right: 5px;
-    }
-
-    &:hover {
-      text-decoration: unset;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 8px;
-  }
-`;
+import { Main, Heading, Content } from "@/components/pageStyles/blog/styles";
 
 type Props = {
   blog: Blog;
   highlightedBody: string;
+  previousBlog: Blog | null;
+  nextBlog: Blog | null;
 };
 
-export default function BlogId({ blog, highlightedBody }: Props) {
+// 静的生成のためのパスを指定
+export const getStaticPaths = async () => {
+  const data = await client.get({ endpoint: "blog" });
+
+  const paths = data.contents.map((content: any) => `/blog/${content.id}`);
+  return { paths, fallback: false };
+};
+
+// データをテンプレートに受け渡す部分の処理を記述
+export const getStaticProps = async (context: any) => {
+  const id = context.params.id;
+  const data = await client.get({ endpoint: "blog", contentId: id });
+
+  const $ = cheerio.load(data.body);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+  // console.log($.html());
+
+  const blogList = await client.get({ endpoint: "blog" });
+  const currentBlogIndex = blogList.contents.findIndex(
+    (blog: Blog) => blog.id === id
+  );
+
+  const previousBlog =
+    currentBlogIndex > 0 ? blogList.contents[currentBlogIndex - 1] : null;
+  const nextBlog =
+    currentBlogIndex < blogList.contents.length - 1
+      ? blogList.contents[currentBlogIndex + 1]
+      : null;
+
+  return {
+    props: {
+      blog: data,
+      highlightedBody: $.html(),
+      previousBlog,
+      nextBlog,
+    },
+  };
+};
+
+export default function BlogId({
+  blog,
+  highlightedBody,
+  previousBlog,
+  nextBlog,
+}: Props) {
+  //更新日がない場合は非表示
   if (blog.updatedAt === undefined) {
     blog.updatedAt = "";
   }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -148,37 +112,16 @@ export default function BlogId({ blog, highlightedBody }: Props) {
           <Content
             dangerouslySetInnerHTML={{ __html: highlightedBody }}
           ></Content>
+          <div>
+            {previousBlog && (
+              <Link href={`/blog/${previousBlog.id}`}>前のページへ</Link>
+            )}
+            {nextBlog && (
+              <Link href={`/blog/${nextBlog.id}`}>次のページへ</Link>
+            )}
+          </div>
         </Main>
       </>
     </motion.div>
   );
 }
-
-// 静的生成のためのパスを指定します
-export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
-
-  const paths = data.contents.map((content: any) => `/blog/${content.id}`);
-  return { paths, fallback: false };
-};
-
-// データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async (context: any) => {
-  const id = context.params.id;
-  const data = await client.get({ endpoint: "blog", contentId: id });
-
-  const $ = cheerio.load(data.body);
-  $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
-  });
-  console.log($.html());
-
-  return {
-    props: {
-      blog: data,
-      highlightedBody: $.html(),
-    },
-  };
-};

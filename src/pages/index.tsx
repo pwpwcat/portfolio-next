@@ -1,7 +1,4 @@
-import { useState, useEffect, FC } from "react";
 import { NextPage } from "next";
-import styled from "styled-components";
-import Image from "next/image";
 import { client } from "@/libs/client";
 import type { WorkType, Blog } from "@/types/blog";
 import Text from "@/components/Text";
@@ -9,129 +6,43 @@ import SecTitle from "@/components/SecTitle";
 import WorkList from "@/components/WorkList";
 import BlogList from "@/components/BlogList";
 import More from "@/components/MoreButton";
-import { pc, sp, tab } from "@/components/Media";
 import MyHead from "@/components/include/MyHead";
-import Loading from "@/components/Loading";
 import { motion } from "framer-motion";
+import {
+  Section,
+  Mv,
+  Detail,
+  ContactList,
+  WorkUl,
+  BlogUl,
+} from "@/components/pageStyles/home/styles";
 
-const Section = styled.section`
-  border-bottom: 3px dotted #e0e0e0;
-  padding: 40px 0;
-
-  ${sp`
-      padding: 30px 0;
-  `}
-`;
-
-const Mv = styled.div`
-  height: 250px;
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  ${sp`
-    height: 140px;
-`}
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+//記事をシャッフルするための関数
+function shuffleArray(array: Array<any>) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-`;
-
-const Detail = styled.ul`
-  padding-top: 40px;
-  li {
-    /* border-top: 1px solid #e0e0e0; */
-    padding-bottom: 40px;
-
-    ${sp`
-    padding-bottom:35px;
-`}
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  h3 {
-    margin-bottom: 10px;
-    font-size: 15px;
-
-    span {
-      font-size: 12px;
-      margin-left: 10px;
-      font-weight: 500;
-    }
-
-    svg {
-      width: 18px;
-      position: relative;
-      top: 3px;
-      margin-right: 8px;
-    }
-  }
-
-  a {
-    display: inline-block;
-    line-height: 1.8;
-    margin-right: 10px;
-  }
-
-  .DetailText,
-  a {
-    font-size: 13px;
-    line-height: 1.8;
-  }
-`;
-
-const ContactList = styled.ul`
-  margin-top: 15px;
-  li {
-    line-height: 1.9;
-
-    a {
-      font-weight: 700;
-      display: inline-block;
-    }
-  }
-`;
-
-const WorkUl = styled.ul`
-  padding-top: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  ${sp`
-      display: block;
-  `}
-`;
-
-const BlogUl = styled.ul`
-  padding-top: 5px;
-
-  li {
-    margin-bottom: 10px;
-    ${sp`
-      margin-bottom: 20px;
-    `}
-  }
-`;
+  return array;
+}
 
 export const getStaticProps = async () => {
   const work = await client.get({
     endpoint: "work",
-    queries: { limit: 2 },
+    queries: { limit: 999 }, //とりあえず全件取得
   });
+
   const blog = await client.get({
     endpoint: "blog",
-    queries: { limit: 2 },
+    queries: { limit: 3 },
   });
+
+  const shuffledWorks = shuffleArray(work.contents); //取得した記事をシャッフル
+  const randomWorks = shuffledWorks.slice(0, 2); //2件だけ表示
 
   return {
     props: {
-      works: work.contents,
+      works: randomWorks,
       blogs: blog.contents,
     },
   };
