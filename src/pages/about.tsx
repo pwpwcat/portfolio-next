@@ -109,6 +109,10 @@ export const LikeDetail = styled.ul`
     display: inline-block;
     line-height: 1.8;
     margin-right: 10px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: unset;
+    }
   }
 
   .DetailText,
@@ -328,7 +332,7 @@ export default function About() {
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
           <Text>
-            また、婦人科系の持病により転職を繰り返さざるを得ませんでした。現在勤めている会社は基本的にリモートワークを採用しているため、特に問題無く長期的に勤務させていただいてます。
+            また、婦人科系の持病と貧血により転職を繰り返してしまっていました。体力的に通勤ができなくなってしまうことが多々ありました。現在勤めている会社は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。大変助かっています...
           </Text>
         </Section>
         <Section>
@@ -380,133 +384,133 @@ export default function About() {
                 <a
                   href="https://youtu.be/sOjvROaN6wI"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   KEYTALK
                 </a>
                 <a
                   href="https://youtu.be/09wA4qWXOdU"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   BRADIO
                 </a>
                 <a
                   href="https://youtu.be/hzWqb4mS0Mg"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   JAM Project
                 </a>
                 <a
                   href="https://youtu.be/X4QGvxLAw2Y"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   福山芳樹
                 </a>
                 <a
                   href="https://youtu.be/l6SeJDA0JA4"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Fire Bomber
                 </a>
                 <a
                   href="https://www.youtube.com/watch?v=Pca7RONLQdE"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   きくお
                 </a>
                 <a
                   href="https://youtu.be/fjrvWaXJj_A"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   ALI PROJECT
                 </a>
                 <a
                   href="https://music.youtube.com/watch?v=SEb3uEQ4gok&amp;feature=share"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   平沢進
                 </a>
                 <a
                   href="https://music.youtube.com/watch?v=LRHVrMy2Vj4&amp;feature=share"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   P-MODEL
                 </a>
                 <a
                   href="https://music.youtube.com/watch?v=OJU6BImQ7sQ&amp;feature=share"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   倉橋ヨエコ
                 </a>
                 <a
                   href="https://youtu.be/XL5inQwnFSg"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   女王蜂
                 </a>
                 <a
                   href="https://youtu.be/Q6x1LFYZAVU"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   amazarashi
                 </a>
                 <a
                   href="https://youtu.be/JKhMgQAY26c"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   神聖かまってちゃん
                 </a>
                 <a
                   href="https://youtu.be/-4O6X3Z_QUA"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   アーバンギャルド
                 </a>
                 <a
                   href="https://youtu.be/c7VCxdEmHU0"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Kalafina
                 </a>
                 <a
                   href="https://youtu.be/XVOdJFbQuts"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Sound Horizon
                 </a>
                 <a
                   href="https://youtu.be/j6AB_tgZHGk"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   キセル
                 </a>
                 <a
                   href="https://www.nicovideo.jp/watch/sm7295500"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   cosMo@暴走P
                 </a>
                 <a
                   href="https://youtu.be/3DghhiR5oHk"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   ATOLS
                 </a>
