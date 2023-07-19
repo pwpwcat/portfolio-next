@@ -9,7 +9,12 @@ import { client } from "@/libs/client";
 import type { Blog } from "@/types/blog";
 import MyHead from "@/components/include/MyHead";
 import { motion } from "framer-motion";
-import { Main, Heading, Content } from "@/components/pageStyles/blog/styles";
+import {
+  Main,
+  Heading,
+  Content,
+  ArticleLink,
+} from "@/components/pageStyles/blog/styles";
 
 type Props = {
   blog: Blog;
@@ -112,14 +117,14 @@ export default function BlogId({
           <Content
             dangerouslySetInnerHTML={{ __html: highlightedBody }}
           ></Content>
-          <div>
+          <ArticleLink>
             {previousBlog && (
               <Link href={`/blog/${previousBlog.id}`}>前のページへ</Link>
             )}
             {nextBlog && (
               <Link href={`/blog/${nextBlog.id}`}>次のページへ</Link>
             )}
-          </div>
+          </ArticleLink>
         </Main>
       </>
     </motion.div>

@@ -81,6 +81,13 @@ export const Content = styled.div`
     }
   }
 
+  img {
+    margin-top: 15px;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -88,5 +95,20 @@ export const Content = styled.div`
   h5,
   h6 {
     margin-bottom: 8px;
+  }
+`;
+
+export const ArticleLink = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  a {
+    color: rgb(213 123 145);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: unset;
+    }
   }
 `;
