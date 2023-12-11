@@ -176,6 +176,7 @@ export default function About() {
           <Text>
             現在は茨城を拠点に、主にフロントエンドエンジニア・時々イラストレーターとして活動しています。
           </Text>
+          <Text>また、勉強を兼ねて身内用misskeyサーバーも運営しています。</Text>
           <Skill>
             <Text>HTML5・CSS(SCSS) - 6年</Text>
             <Text>Javascript(jQuery) - 4年</Text>
