@@ -71,6 +71,10 @@ const CareerUl = styled.div`
   }
 `;
 
+const Skill = styled.div`
+  margin-top: 20px;
+`;
+
 export const LikeDetail = styled.ul`
   padding-top: 25px;
   padding-bottom: 40px;
@@ -170,8 +174,18 @@ export default function About() {
             2016年からWEB制作会社でアルバイトを始め、その後2019年までWEBデザイナーとして活動していました。
           </Text>
           <Text>
-            現在は茨城を拠点に、主にフロントエンドエンジニアとして活動しています。
+            現在は茨城を拠点に、主にフロントエンドエンジニア・時々イラストレーターとして活動しています。
           </Text>
+          <Skill>
+            <Text>HTML5・CSS(SCSS) - 6年</Text>
+            <Text>Javascript(jQuery) - 4年</Text>
+            <Text>React(Next.js) - 1年</Text>
+            <Text>Git(ターミナルでの操作) - 3年</Text>
+            <Text>Photoshop - 7年</Text>
+            <Text>illustrator - 4年</Text>
+            <Text>XD - 4年</Text>
+            <Text>Figma - 1年</Text>
+          </Skill>
           <LikeBtn href="#like">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -199,12 +213,6 @@ export default function About() {
               </div>
               <div className="comment">
                 <h3>八洲学園大学国際高等学校を卒業</h3>
-                {/* <Text>
-                2012年に地元の女子高から通信制の八洲学園大学高等学校へ編入しました。当時は小学生の頃からとにかく好きだったチャットをしたりデジタルイラストを描いたりしていて、家が山奥にあるという事もありほとんど家に引きこもっていました。
-              </Text>
-              <Text>
-                この頃に好きなイラストレーターさんの素敵なWEBサイトを見て、こういうサイトを自分で作ってみたいと思い、色々調べていたところWEBデザイナーという職業がある事を知り、WEB業界で働きたいと思い始めていました。
-              </Text> */}
               </div>
             </li>
             <li>
@@ -216,12 +224,6 @@ export default function About() {
                   WEB制作会社へ入社<br className="sp-display"></br>
                   （秋葉原｜短期アルバイト）
                 </h3>
-                {/* <Text>
-                雑貨屋のアルバイトをしながら独学で勉強を重ね、その後WEB制作会社へアルバイトとして入社しました。
-              </Text> */}
-                {/* <Text>
-                社内開発のCMSを使用して大学のホームページを制作している会社でした。
-              </Text> */}
                 <div className="work">
                   <Text>Photoshopでの画像編集 / 簡単なHTML修正</Text>
                 </div>
@@ -239,12 +241,6 @@ export default function About() {
                   採用コンサル会社へ入社<br className="sp-display"></br>
                   （代々木｜アルバイト）
                 </h3>
-                {/* <Text>
-                WEBデザイナーとして入社しました。LP制作や採用サイト制作、バナー制作など、幅広く携わらせていただき良い経験を積むことができました。
-              </Text>
-              <Text>
-                しかし正社員の話が上がった時に、「女性だから営業もやってもらうね」と社長から直々に言われてしまい、契約更新を機に退職しました...
-              </Text> */}
 
                 <div className="work">
                   <Text>Photoshopでのバナー制作、WEBデザイン、LPデザイン</Text>
@@ -263,12 +259,6 @@ export default function About() {
                   WEB制作会社へ入社<br className="sp-display"></br>
                   （飯田橋｜アルバイト→契約社員）
                 </h3>
-                {/* <Text>
-                WEBデザイナー/コーダーとして入社しました。ここではコーディングスキルがぐんと身についたように感じました。社内開発のCMSの設定や、コーポレートサイトのコーディング、更新作業など経験させていただきました。
-              </Text>
-              <Text>
-                2019年8月頃に体調を崩してしまい、退職して地元茨城に戻りました。
-              </Text> */}
 
                 <div className="work">
                   <Text>
@@ -289,12 +279,6 @@ export default function About() {
                   WEB/アプリ制作会社へ入社<br className="sp-display"></br>
                   （渋谷｜正社員）
                 </h3>
-                {/* <Text>
-                茨城から完全在宅で、フロントエンドエンジニアとして入社しましたが、UIデザインやWEBデザインなども担当させていただいていました。
-              </Text>
-              <Text>
-                クライアント先への打ち合わせの訪問にも参加していました。
-              </Text> */}
 
                 <div className="work">
                   <Text>
@@ -337,6 +321,7 @@ export default function About() {
         </Section>
         <Section>
           <SecTitle>Like*</SecTitle>
+          <Text>生粋のねこ好きです🐈</Text>
           <LikeDetail id="like">
             <li>
               <h3>
