@@ -177,6 +177,7 @@ export default function About() {
             現在は茨城を拠点に、主にフロントエンドエンジニア・時々イラストレーターとして活動しています。
           </Text>
           <Text>また、勉強を兼ねて身内用misskeyサーバーも運営しています。</Text>
+          <Text>生粋のねこ好きです🐈</Text>
           <Skill>
             <Text>HTML5・CSS(SCSS) - 6年</Text>
             <Text>Javascript(jQuery) - 4年</Text>
@@ -187,7 +188,7 @@ export default function About() {
             <Text>XD - 4年</Text>
             <Text>Figma - 1年</Text>
           </Skill>
-          <LikeBtn href="#like">
+          {/* <LikeBtn href="#like">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -203,7 +204,7 @@ export default function About() {
               />
             </svg>
             好きなもの
-          </LikeBtn>
+          </LikeBtn> */}
         </Section>
         <Section>
           <SecTitle>Career</SecTitle>
@@ -320,7 +321,7 @@ export default function About() {
             また、婦人科系の持病と貧血により転職を繰り返してしまっていました。体力的に通勤ができなくなってしまうことが多々ありました。現在勤めている会社は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。大変助かっています...
           </Text>
         </Section>
-        <Section>
+        {/* <Section>
           <SecTitle>Like*</SecTitle>
           <Text>生粋のねこ好きです🐈</Text>
           <LikeDetail id="like">
@@ -503,7 +504,7 @@ export default function About() {
               </div>
             </li>
           </LikeDetail>
-        </Section>
+        </Section> */}
       </>
     </motion.div>
   );
