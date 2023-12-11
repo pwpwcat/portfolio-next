@@ -8,6 +8,7 @@ import SecTitle from "@/components/SecTitle";
 import MyHead from "@/components/include/MyHead";
 import { pc, sp, tab } from "@/components/Media";
 import { motion } from "framer-motion";
+import Text from "@/components/Text";
 
 const Ul = styled.ul`
   padding-top: 5px;
@@ -21,6 +22,13 @@ const Section = styled.section`
   ${sp`
       margin-top: 40px;
   `}
+  li {
+    margin-bottom: 40px;
+  }
+`;
+
+const Comment = styled.div`
+  margin-bottom: 15px;
   li {
     margin-bottom: 40px;
   }
@@ -58,6 +66,11 @@ export default function Work({ works }: Props) {
         <MyHead title={"Work | pwpw-cat portfolio site"} />
         <Section>
           <SecTitle>Work</SecTitle>
+          <Comment>
+            <Text>
+              直近でもいくつかございますが、こちらでは公開できる制作物のみ掲載しております。
+            </Text>
+          </Comment>
           <Ul>
             {works.map((work) => (
               <WorkList
