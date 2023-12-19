@@ -69,6 +69,9 @@ export default function Work({ works }: Props) {
           <Comment>
             <Text>
               直近でもいくつかございますが、こちらでは公開できる制作物のみ掲載しております。
+              {/* <Link scroll={false} href="/private">
+                限定公開
+              </Link> */}
             </Text>
           </Comment>
           <Ul>

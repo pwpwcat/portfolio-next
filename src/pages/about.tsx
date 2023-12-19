@@ -168,7 +168,7 @@ export default function About() {
           <Text>1996年3月8日生 茨城県出身</Text>
           <Text>MIYAという名前は旧姓と誕生日から取っています。</Text>
           <Text>
-            WEB制作会社での経験を活かし、茨城を拠点としてWEBサイト制作を行っています。
+            WEB制作会社での経験を活かし、現在は茨城を拠点としてWEBサイト制作を行っています。
           </Text>
           <Text>
             2016年からWEB制作会社でアルバイトを始め、その後2019年までWEBデザイナーとして活動していました。
@@ -177,7 +177,7 @@ export default function About() {
             現在は茨城を拠点に、主にフロントエンドエンジニア・時々イラストレーターとして活動しています。
           </Text>
           <Text>また、勉強を兼ねて身内用misskeyサーバーも運営しています。</Text>
-          <Text>生粋のねこ好きです🐈</Text>
+          <Text>好きな食べ物はいくら、好きな動物はねこです🐈</Text>
           <Skill>
             <Text>HTML5・CSS(SCSS) - 6年</Text>
             <Text>Javascript(jQuery) - 4年</Text>

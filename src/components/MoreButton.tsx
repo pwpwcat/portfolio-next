@@ -13,14 +13,28 @@ const MoreButton = styled.div`
   a {
     display: inline-block;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #51516e;
+
+    &:hover {
+      border-bottom: 1px solid #e298aa;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    margin-left: 3px;
+    /* position: relative;
+    top: 1px; */
   }
 `;
 
 const More: React.FC<Props> = ({ url }) => {
   return (
     <MoreButton>
-      <Link href={url}>More</Link>
+      <Link href={url}>
+        More<span>→</span>
+      </Link>
     </MoreButton>
   );
 };
