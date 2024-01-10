@@ -169,7 +169,7 @@ export default function Home({ works, blogs }: Props) {
             下記の各ソーシャルメディア、又はEメールにてご連絡ください。
           </Text>
           <ContactList>
-            <li>
+            {/* <li>
               <a
                 href="https://twitter.com/pwpw_cat"
                 target={"_blank"}
@@ -177,7 +177,7 @@ export default function Home({ works, blogs }: Props) {
               >
                 Twitter：@pwpw_cat
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="https://www.instagram.com/20siesta/"
