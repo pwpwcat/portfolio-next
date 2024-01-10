@@ -22,7 +22,7 @@ type Props = {
 
 const List = styled.li`
   line-height: 2;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   a {
     transition: 0.3s;
