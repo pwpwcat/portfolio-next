@@ -219,6 +219,19 @@ export default function About() {
             </li>
             <li>
               <div className="year">
+                2014年<span>4月〜翌年3月</span>
+              </div>
+              <div className="comment">
+                <h3>
+                  東京コミュニケーションアート専門学校グラフィックデザイン科
+                </h3>
+                <div className="work">
+                  <Text>2015年3月に中退してしまいました。</Text>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="year">
                 2017年<span>2月〜8月</span>
               </div>
               <div className="comment">
@@ -318,7 +331,7 @@ export default function About() {
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
           <Text>
-            また、婦人科系の持病と貧血により転職を繰り返してしまっていました。体力的に通勤ができなくなってしまうことが多々ありました。現職は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。
+            また、婦人科系の持病と貧血により、体力的に通勤ができなくなってしまうことが多々ありました。現職は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。
           </Text>
         </Section>
         {/* <Section>
