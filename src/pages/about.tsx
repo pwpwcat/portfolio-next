@@ -330,9 +330,9 @@ export default function About() {
           <Text>
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
-          <Text>
+          {/*<Text>
             また、婦人科系の持病と貧血により、体力的に通勤ができなくなってしまうことが多々ありました。現職は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。
-          </Text>
+          </Text> */}
         </Section>
         {/* <Section>
           <SecTitle>Like*</SecTitle>

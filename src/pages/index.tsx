@@ -165,9 +165,7 @@ export default function Home({ works, blogs }: Props) {
         </Section>
         <Section id="contact">
           <SecTitle>Contact</SecTitle>
-          <Text>
-            下記の各ソーシャルメディア、又はEメールにてご連絡ください。
-          </Text>
+          <Text>下記のEメールにてご連絡ください。</Text>
           <ContactList>
             {/* <li>
               <a
@@ -178,7 +176,7 @@ export default function Home({ works, blogs }: Props) {
                 Twitter：@pwpw_cat
               </a>
             </li> */}
-            <li>
+            {/* <li>
               <a
                 href="https://www.instagram.com/20siesta/"
                 target={"_blank"}
@@ -186,7 +184,7 @@ export default function Home({ works, blogs }: Props) {
               >
                 Instagram：@20siesta
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="mailto:info@pwpw-cat.site">Mail：info@pwpw-cat.site</a>
             </li>
