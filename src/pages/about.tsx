@@ -226,7 +226,7 @@ export default function About() {
                   東京コミュニケーションアート専門学校グラフィックデザイン科
                 </h3>
                 <div className="work">
-                  <Text>2015年3月に中退してしまいました。</Text>
+                  <Text>2015年3月に中退</Text>
                 </div>
               </div>
             </li>
