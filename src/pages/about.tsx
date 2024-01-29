@@ -324,9 +324,7 @@ export default function About() {
               </div>
             </li>
           </CareerUl>
-          <Text>
-            他、個人でWEBサイト制作の案件をお受けしたり、チームでReact（Next.js）でアプリを制作したりしています。
-          </Text>
+          <Text>他、個人でWEBサイト制作の案件をお受けしたりしています。</Text>
           <Text>
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
