@@ -389,28 +389,28 @@ export default function About() {
                   KEYTALK
                 </a>
                 <a
-                  href="https://youtu.be/09wA4qWXOdU"
+                  href="https://youtu.be/VPDZbBTK-vY?si=9QcK01vQZWKcW6zA"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   BRADIO
                 </a>
                 <a
-                  href="https://youtu.be/VPDZbBTK-vY?si=lI6QI-vUEmnbsUv7"
+                  href="https://youtu.be/hzWqb4mS0Mg"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   JAM Project
                 </a>
                 <a
-                  href="https://youtu.be/X4QGvxLAw2Y"
+                  href="https://www.youtube.com/watch?v=JfA5AJwpxGc"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   福山芳樹
                 </a>
                 <a
-                  href="https://www.youtube.com/watch?v=JfA5AJwpxGc"
+                  href="https://youtu.be/l6SeJDA0JA4"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -452,28 +452,28 @@ export default function About() {
                   倉橋ヨエコ
                 </a>
                 <a
-                  href="https://youtu.be/XL5inQwnFSg"
+                  href="https://youtu.be/6KhVog8knBA?si=-GuGnbadOxd-qFVa"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   女王蜂
                 </a>
                 <a
-                  href="https://www.youtube.com/watch?v=6KhVog8knBA"
+                  href="https://youtu.be/Q6x1LFYZAVU"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   amazarashi
                 </a>
                 <a
-                  href="https://youtu.be/JKhMgQAY26c"
+                  href="https://youtu.be/MzxyIHZhyMI?si=Gt_uEAiZ2SCZz_SD"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   神聖かまってちゃん
                 </a>
                 <a
-                  href="https://youtu.be/MzxyIHZhyMI?si=9PeU6Y14EdaJ6Usu"
+                  href="https://youtu.be/-4O6X3Z_QUA"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
