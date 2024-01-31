@@ -188,7 +188,7 @@ export default function About() {
             <Text>XD - 4年</Text>
             <Text>Figma - 1年</Text>
           </Skill>
-          {/* <LikeBtn href="#like">
+          <LikeBtn href="#like">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -204,7 +204,7 @@ export default function About() {
               />
             </svg>
             好きなもの
-          </LikeBtn> */}
+          </LikeBtn>
         </Section>
         <Section>
           <SecTitle>Career</SecTitle>
@@ -324,7 +324,9 @@ export default function About() {
               </div>
             </li>
           </CareerUl>
-          <Text>他、個人でWEBサイト制作の案件をお受けしたりしています。</Text>
+          <Text>
+            他、個人でWEBサイト制作の案件をお受けしたりしています。現在はWordpressメインの案件を中心にお受けしています。
+          </Text>
           <Text>
             このポートフォリオサイトはNext.js+TypeScript+microCMSで制作しています。
           </Text>
@@ -332,7 +334,7 @@ export default function About() {
             また、婦人科系の持病と貧血により、体力的に通勤ができなくなってしまうことが多々ありました。現職は基本的にリモートワークを採用しているため、大きな問題無く長期的に勤務させていただいてます。
           </Text> */}
         </Section>
-        {/* <Section>
+        <Section>
           <SecTitle>Like*</SecTitle>
           <Text>生粋のねこ好きです🐈</Text>
           <LikeDetail id="like">
@@ -515,7 +517,7 @@ export default function About() {
               </div>
             </li>
           </LikeDetail>
-        </Section> */}
+        </Section>
       </>
     </motion.div>
   );
