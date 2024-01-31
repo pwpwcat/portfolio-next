@@ -396,7 +396,7 @@ export default function About() {
                   BRADIO
                 </a>
                 <a
-                  href="https://youtu.be/hzWqb4mS0Mg"
+                  href="https://youtu.be/VPDZbBTK-vY?si=lI6QI-vUEmnbsUv7"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -410,7 +410,7 @@ export default function About() {
                   福山芳樹
                 </a>
                 <a
-                  href="https://youtu.be/l6SeJDA0JA4"
+                  href="https://www.youtube.com/watch?v=JfA5AJwpxGc"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -459,7 +459,7 @@ export default function About() {
                   女王蜂
                 </a>
                 <a
-                  href="https://youtu.be/Q6x1LFYZAVU"
+                  href="https://www.youtube.com/watch?v=6KhVog8knBA"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -473,7 +473,7 @@ export default function About() {
                   神聖かまってちゃん
                 </a>
                 <a
-                  href="https://youtu.be/-4O6X3Z_QUA"
+                  href="https://youtu.be/MzxyIHZhyMI?si=9PeU6Y14EdaJ6Usu"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
