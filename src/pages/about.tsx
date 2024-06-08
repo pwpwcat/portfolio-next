@@ -231,20 +231,17 @@ export default function About() {
               </div>
             </li>
             <li>
-              <div className="year">
-                2017年<span>2月〜8月</span>
-              </div>
+              <div className="year">2016年〜</div>
               <div className="comment">
-                <h3>
-                  WEB制作会社へ入社<br className="sp-display"></br>
-                  （秋葉原｜短期アルバイト）
-                </h3>
+                <h3>フリーター期間</h3>
                 <div className="work">
-                  <Text>Photoshopでの画像編集 / 簡単なHTML修正</Text>
+                  <Text>
+                    リカーショップでバイトしたり制作会社でWEBデザイナーとしてバイトしたりしてました
+                  </Text>
                 </div>
               </div>
             </li>
-            <li>
+            {/* <li>
               <div className="year">
                 2017年
                 <span>
@@ -261,7 +258,7 @@ export default function About() {
                   <Text>Photoshopでのバナー制作、WEBデザイン、LPデザイン</Text>
                 </div>
               </div>
-            </li>
+            </li> */}
             <li>
               <div className="year">
                 2018年
@@ -272,7 +269,7 @@ export default function About() {
               <div className="comment">
                 <h3>
                   WEB制作会社へ入社<br className="sp-display"></br>
-                  （飯田橋｜アルバイト→契約社員）
+                  （飯田橋｜アルバイト→正社員）
                 </h3>
 
                 <div className="work">
